@@ -1,0 +1,8 @@
+version: "3"
+services:
+  imagesharptest:
+    build:
+      context: .
+      dockerfile: ImageSharp.DockerFile
+    volumes:
+      - ./docker_output:/app/docker_output
