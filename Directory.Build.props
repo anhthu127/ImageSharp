@@ -33,6 +33,7 @@
     +===================+=======+==========+=====================+=============+=================+====================+==============+=========+============|
     | SUPPORTS          | MATHF | HASHCODE | EXTENDED_INTRINSICS | SPAN_STREAM | ENCODING_STRING | RUNTIME_INTRINSICS | CODECOVERAGE | HOTPATH | CREATESPAN |
     +===================+=======+==========+=====================+=============+=================+====================+==============+=========|============|
+    | net5              |   Y   |    Y     |         Y           |      Y      |        Y        |        Y           |      Y       |    Y    |      Y     |
     | netcoreapp3.1     |   Y   |    Y     |         Y           |      Y      |        Y        |        Y           |      Y       |    Y    |      Y     |
     | netcoreapp2.1     |   Y   |    Y     |         Y           |      Y      |        Y        |        N           |      Y       |    N    |      Y     |
     | netcoreapp2.0     |   Y   |    N     |         N           |      N      |        N        |        N           |      Y       |    N    |      Y     |
@@ -43,6 +44,17 @@
     +===================+=======+==========+=====================+=============+=================+====================+==============+=========|============|
     -->
 
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net5.0'">
+    <DefineConstants>$(DefineConstants);SUPPORTS_MATHF</DefineConstants>
+    <DefineConstants>$(DefineConstants);SUPPORTS_HASHCODE</DefineConstants>
+    <DefineConstants>$(DefineConstants);SUPPORTS_EXTENDED_INTRINSICS</DefineConstants>
+    <DefineConstants>$(DefineConstants);SUPPORTS_SPAN_STREAM</DefineConstants>
+    <DefineConstants>$(DefineConstants);SUPPORTS_ENCODING_STRING</DefineConstants>
+    <DefineConstants>$(DefineConstants);SUPPORTS_RUNTIME_INTRINSICS</DefineConstants>
+    <DefineConstants>$(DefineConstants);SUPPORTS_CODECOVERAGE</DefineConstants>
+    <DefineConstants>$(DefineConstants);SUPPORTS_HOTPATH</DefineConstants>
+    <DefineConstants>$(DefineConstants);SUPPORTS_CREATESPAN</DefineConstants>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
     <DefineConstants>$(DefineConstants);SUPPORTS_MATHF</DefineConstants>
     <DefineConstants>$(DefineConstants);SUPPORTS_HASHCODE</DefineConstants>
