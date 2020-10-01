@@ -1,12 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp5.0</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="93362884-d5684100-f846-11ea-852a-b3735e5503a7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="93362884-d5684100-f846-11ea-852a-b3735e5503a7_small.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="93362884-d5684100-f846-11ea-852a-b3735e5503a7_small.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="93362884-d5684100-f846-11ea-852a-b3735e5503a7_small.png">
