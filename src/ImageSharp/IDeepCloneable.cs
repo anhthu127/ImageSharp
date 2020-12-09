@@ -1,7 +1,4 @@
-﻿// Copyright (c) Six Labors.
-// Licensed under the Apache License, Version 2.0.
-
-namespace SixLabors.ImageSharp
+﻿namespace SixLabors.ImageSharp
 {
     /// <summary>
     /// A generic interface for a deeply cloneable type.
